@@ -16,7 +16,10 @@ function uploadTestimonial(el){
   document.getElementById('fileTestimonial').click();
 }
 function uploadGallery(el){
-  if(!isAdmin) return;
+  if(!isAdmin){
+    openLightbox(el);
+    return;
+  }
   curGal = el;
   document.getElementById('fileGallery').click();
 }
@@ -113,4 +116,77 @@ document.addEventListener('DOMContentLoaded', ()=>{
   });
 
   console.log('Wael Farid Travel - Pro version loaded' + (isAdmin ? ' [admin mode]' : ''));
+
+  /* ---------- Hero slider ---------- */
+  const slides = document.querySelectorAll('.hero-slide');
+  if(slides.length){
+    let curSlide = 0;
+    setInterval(()=>{
+      slides[curSlide].classList.remove('active');
+      curSlide = (curSlide + 1) % slides.length;
+      slides[curSlide].classList.add('active');
+    }, 4500);
+  }
+
+  /* ---------- Animated counters ---------- */
+  const counters = document.querySelectorAll('[data-count]');
+  if(counters.length){
+    const animateCounter = (el)=>{
+      const target = parseInt(el.dataset.count, 10);
+      const duration = 1400;
+      const start = performance.now();
+      const step = (now)=>{
+        const progress = Math.min((now - start) / duration, 1);
+        el.textContent = Math.floor(progress * target).toLocaleString('en-US');
+        if(progress < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString('en-US');
+      };
+      requestAnimationFrame(step);
+    };
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.5});
+    counters.forEach(el=> observer.observe(el));
+  }
+});
+
+/* ---------- Lightbox ---------- */
+let lightboxImages = [];
+let lightboxIndex = 0;
+
+function openLightbox(el){
+  const items = Array.from(document.querySelectorAll('#galleryGrid .g-item img'));
+  lightboxImages = items.map(img => img.src);
+  const clickedImg = el.querySelector('img');
+  lightboxIndex = clickedImg ? items.indexOf(clickedImg) : 0;
+  if(lightboxIndex < 0) lightboxIndex = 0;
+  showLightboxImage();
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function showLightboxImage(){
+  if(!lightboxImages.length) return;
+  document.getElementById('lightboxImg').src = lightboxImages[lightboxIndex];
+}
+
+function navLightbox(dir){
+  if(!lightboxImages.length) return;
+  lightboxIndex = (lightboxIndex + dir + lightboxImages.length) % lightboxImages.length;
+  showLightboxImage();
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+document.addEventListener('keydown', (e)=>{
+  if(!document.getElementById('lightbox').classList.contains('open')) return;
+  if(e.key === 'Escape') closeLightbox();
+  if(e.key === 'ArrowLeft') navLightbox(1);
+  if(e.key === 'ArrowRight') navLightbox(-1);
 });

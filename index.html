@@ -8,13 +8,16 @@
 <meta name="theme-color" content="#0D1B2A">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
+<link rel="canonical" href="https://wael-faridtourism.github.io/Wael-Farid-Tourism/">
+<meta name="google-site-verification" content="UphKLko6jwMcPGAOeB-rHPiWSray6a7ruoRjudYqaKk" />
 
 <!-- Open Graph / social sharing preview -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://wael-faridtourism.github.io/Wael-Farid-Tourism/">
 <meta property="og:site_name" content="Wael Farid for Travel & Tourism">
 <meta property="og:title" content="وائل فريد للسفر والسياحة - عمرة وحج وتأشيرات">
 <meta property="og:description" content="خبرة في تنظيم رحلات العمرة والحج والسياحة داخل وخارج مصر. تأشيرات، طيران، فنادق قريبة من الحرم، ومتابعة حية على واتساب.">
-<meta property="og:image" content="logo.png">
+<meta property="og:image" content="https://wael-faridtourism.github.io/Wael-Farid-Tourism/logo.png">
 <meta property="og:locale" content="ar_EG">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -48,17 +51,22 @@
 </div>
 <nav class="nav">
 <a href="#">الرئيسية</a>
-<a href="#about">من نحن</a>
-<a href="#offers">العمرة</a>
+<a href="#offers">برامج العمرة</a>
 <a href="#hotels">الفنادق</a>
-<a href="#testimonials">آراء العملاء</a>
 <a href="#gallery">معرض الصور</a>
-<a href="#faq">أسئلة شائعة</a>
+<a href="#testimonials">آراء العملاء</a>
+<a href="#contact">تواصل معنا</a>
 </nav>
 <a class="btn btn-gold" href="https://wa.me/201069342225">01069342225 📞</a>
 </header>
 
 <section class="hero">
+<div class="hero-slider" id="heroSlider">
+<div class="hero-slide active" style="background-image:url('gallery-crowd.jpg')"></div>
+<div class="hero-slide" style="background-image:url('gallery-mazarat.jpg')"></div>
+<div class="hero-slide" style="background-image:url('gallery-banner.jpg')"></div>
+<div class="hero-slide" style="background-image:url('hotel-almasa-grand.jpg')"></div>
+</div>
 <div class="hero-logo-wm"><img src="logo.png" width="500" height="500" alt="" loading="lazy"></div>
 <h1>نسافر معك بثقة...<br><span class="gold">وننجز إجراءاتك باحتراف</span></h1>
 <p class="tagline">✈️ وائل فريد - خبرة في تنظيم رحلات العمرة والحج والسياحة داخل وخارج مصر 🌍<br>هدفنا راحتك وطمأنينتك من أول الرحلة لحد العودة بخير 🕋</p>
@@ -67,9 +75,10 @@
 <a class="btn btn-green" href="https://wa.me/201069342225">تواصل واتساب</a>
 </div>
 <div class="stats">
-<div class="stat"><b>+5000</b><span>معتمر سعيد</span></div>
-<div class="stat"><b>10+</b><span>سنوات خبرة</span></div>
-<div class="stat"><b>4.9/5</b><span>تقييم العملاء</span></div>
+<div class="stat"><b data-count="5000">0</b><span>+معتمر سعيد</span></div>
+<div class="stat"><b data-count="300">0</b><span>+تأشيرة مصدرة</span></div>
+<div class="stat"><b data-count="12">0</b><span>+سنة خبرة</span></div>
+<div class="stat"><b>⭐⭐⭐⭐⭐</b><span>رضا العملاء</span></div>
 </div>
 </section>
 
@@ -80,6 +89,16 @@
 <div class="s-card">🕋<br>عمرة وحج</div>
 <div class="s-card">🚌<br>مواصلات</div>
 <div class="s-card">🚆<br>قطار الحرمين</div>
+</section>
+
+<section class="section" id="why" style="padding-bottom:20px">
+<h2 class="section-title">ليه تختار وائل فريد؟</h2>
+<div class="why-grid">
+<div class="why-card"><div class="why-icon">🕋</div><h3>خبرة أكثر من 12 سنة</h3><p>في تنظيم رحلات العمرة والحج والسياحة</p></div>
+<div class="why-card"><div class="why-icon">🏨</div><h3>فنادق معتمدة</h3><p>تعاقدات مباشرة مع فنادق قريبة من الحرمين</p></div>
+<div class="why-card"><div class="why-icon">✈️</div><h3>استخراج التأشيرات</h3><p>إصدار سريع وموثوق من السفارة السعودية</p></div>
+<div class="why-card"><div class="why-icon">⭐</div><h3>خدمة عملاء 24 ساعة</h3><p>متابعة حية على واتساب طول الرحلة</p></div>
+</div>
 </section>
 
 <section class="section" id="about">
@@ -157,8 +176,25 @@
 <div class="g-item" data-slot="g4" onclick="uploadGallery(this)"><img src="gallery-airport.jpg" alt="معتمرين وائل فريد في المطار" loading="lazy"></div>
 <div class="g-item" data-slot="g5" onclick="uploadGallery(this)"><img src="gallery-group.jpg" alt="صورة جماعية لمعتمرين وائل فريد" loading="lazy"></div>
 <div class="g-item" data-slot="g6" onclick="uploadGallery(this)"><img src="gallery-dua.jpg" alt="لحظة دعاء أمام الكعبة المشرفة" loading="lazy"></div>
+<div class="g-item" data-slot="g7" onclick="uploadGallery(this)"><img src="gallery-airport2.jpg" alt="معتمرين وائل فريد في المطار بجوازات السفر" loading="lazy"></div>
+<div class="g-item" data-slot="g8" onclick="uploadGallery(this)"><img src="gallery-haram-men.jpg" alt="معتمرين داخل المسجد الحرام" loading="lazy"></div>
+<div class="g-item" data-slot="g9" onclick="uploadGallery(this)"><img src="gallery-haram-women.jpg" alt="معتمرات داخل المسجد الحرام" loading="lazy"></div>
+<div class="g-item" data-slot="g10" onclick="uploadGallery(this)"><img src="gallery-nabawi-women.jpg" alt="معتمرات أمام المسجد النبوي" loading="lazy"></div>
+<div class="g-item" data-slot="g11" onclick="uploadGallery(this)"><img src="gallery-terminal-women.jpg" alt="معتمرات في صالة المطار" loading="lazy"></div>
+<div class="g-item" data-slot="g12" onclick="uploadGallery(this)"><img src="gallery-nabawi-door.jpg" alt="معتمرات أمام باب المسجد النبوي" loading="lazy"></div>
+<div class="g-item" data-slot="g13" onclick="uploadGallery(this)"><img src="gallery-wael-airport.jpg" alt="وائل فريد يستقبل المعتمرين في المطار" loading="lazy"></div>
 </div>
 <p class="alert-dark admin-only" style="display:none">⚠️ ملاحظة للسيدات: اعمل Blur للوجه قبل الرفع للحفاظ على الخصوصية - هذا يزيد ثقة العملاء</p>
+</section>
+
+<section class="section" id="videos" style="background:#0f2336;padding-top:35px">
+<h2 class="section-title">فيديوهات رحلاتنا</h2>
+<p class="section-sub">لحظات حية من رحلات معتمرينا</p>
+<div class="video-grid">
+<div class="video-card"><video controls preload="none" poster="video-poster-1.jpg"><source src="video-clip-1.mp4" type="video/mp4"></video></div>
+<div class="video-card"><video controls preload="none" poster="video-poster-2.jpg"><source src="video-clip-2.mp4" type="video/mp4"></video></div>
+<div class="video-card"><video controls preload="none" poster="video-poster-3.jpg"><source src="video-clip-3.mp4" type="video/mp4"></video></div>
+</div>
 </section>
 
 <section class="section" id="faq">
@@ -184,7 +220,7 @@
 </div>
 </section>
 
-<section class="qr-section">
+<section class="qr-section" id="contact">
 <div class="qr-info">
 <h2 class="gold">انضم لمجتمعنا</h2>
 <p>تشرفونا على صفحاتنا وجروباتنا الرسمية</p>
@@ -204,22 +240,61 @@
 <img src="qr-whatsapp.png" alt="رابط جروب واتساب وائل فريد" width="130" height="130" loading="lazy">
 <a class="btn btn-green full" href="https://chat.whatsapp.com/ETXGaCxbugc4JZrTFoiRFn" target="_blank">انضم للجروب</a>
 </div>
-<div class="qr-card telegram">
-<h4>✈️ تليجرام</h4>
-<div style="font-size:40px">📢</div>
-<p>جروبنا الرسمي</p>
+<div class="qr-card">
+<h4>📢 جروبنا على تليجرام</h4>
+<img src="qr-telegram.png" alt="رابط جروب تليجرام وائل فريد" width="130" height="130" loading="lazy">
 <a class="btn btn-gold full" href="https://t.me/Omratransit" target="_blank">انضم لتليجرام</a>
 </div>
 </div>
 </section>
 
 <footer class="footer">
-<div class="footer-gold">WAEL FARID FOR TRAVEL & TOURISM - وائل فريد للسفر والسياحة</div>
-<div>نسافر معك بثقة... وننجز إجراءاتك باحتراف | قطار الحرمين | مواصلات | تأشيرات | عمرة وحج</div>
-<div style="margin-top:8px">© 2026 جميع الحقوق محفوظة</div>
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-brand">
+<img src="logo.png" alt="Wael Farid Logo">
+<div>
+<div class="footer-gold" style="color:var(--gold);font-weight:800">WAEL FARID</div>
+<div style="font-size:11px">وائل فريد للسفر والسياحة</div>
+</div>
+</div>
+<p style="margin-top:14px">نسافر معك بثقة... وننجز إجراءاتك باحتراف</p>
+<p>📞 <a href="https://wa.me/201069342225">01069342225</a></p>
+<div class="footer-social">
+<a href="https://www.facebook.com/share/1EC9vFoRK8/" target="_blank" title="فيسبوك">📘</a>
+<a href="https://wa.me/201069342225" target="_blank" title="واتساب">💬</a>
+<a href="https://t.me/Omratransit" target="_blank" title="تليجرام">📢</a>
+</div>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<a href="#offers">برامج العمرة</a>
+<a href="#hotels">الفنادق</a>
+<a href="#gallery">معرض الصور</a>
+<a href="#videos">فيديوهات</a>
+<a href="#testimonials">آراء العملاء</a>
+<a href="#faq">أسئلة شائعة</a>
+<a href="about.html">من نحن</a>
+</div>
+<div class="footer-col">
+<h4>تابعنا وامسح الكود</h4>
+<div class="footer-qr">
+<img src="qr-facebook.png" alt="QR فيسبوك">
+<img src="qr-whatsapp.png" alt="QR واتساب">
+</div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 وائل فريد للسفر والسياحة - جميع الحقوق محفوظة</div>
 </footer>
 
 <a class="float-wa" href="https://wa.me/201069342225">💬</a>
+
+<div class="lightbox-overlay" id="lightbox">
+<button class="lightbox-close" onclick="closeLightbox()">✕</button>
+<button class="lightbox-nav lightbox-prev" onclick="navLightbox(1)">‹</button>
+<img id="lightboxImg" src="" alt="">
+<button class="lightbox-nav lightbox-next" onclick="navLightbox(-1)">›</button>
+</div>
 
 <input type="file" id="fileTestimonial" accept="image/*" style="display:none">
 <input type="file" id="fileGallery" accept="image/*" style="display:none">
