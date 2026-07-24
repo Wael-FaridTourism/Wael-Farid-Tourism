@@ -33,7 +33,7 @@ img{max-width:100%}
 .stat b{display:block;color:var(--gold);font-size:22px}
 .stat span{font-size:12px;color:var(--beige)}
 .services-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;padding:30px 5%;background:#0f2336;border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15)}
-.services-bar .s-card{background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.2);padding:18px;border-radius:12px;text-align:center;font-size:13px;transition:.2s;color:#fff;display:block}
+.services-bar .s-card{background:rgba(255,255,255,.05);border:1px solid rgba(212,175,55,.2);padding:18px;border-radius:12px;text-align:center;font-size:13px;transition:.2s;color:#fff;display:block;text-decoration:none}
 .services-bar .s-card:hover{background:rgba(212,175,55,.1);transform:translateY(-2px);border-color:var(--gold)}
 .section{padding:65px 5%}
 .section-title{text-align:center;color:var(--gold);font-size:30px}
