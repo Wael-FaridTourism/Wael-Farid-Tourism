@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معرض صور وفيديوهات رحلات العمرة - وائل فريد للعمرة</title>
+<meta name="description" content="معرض صور وفيديوهات حقيقية من رحلات عمرة وحج نظمها وائل فريد للعمرة: لقطات من الحرمين الشريفين، المطارات، والمزارات. شاهد تجربة معتمرينا بنفسك.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://wael-faridtourism.github.io/Wael-Farid-Tourism/gallery.html">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+<div class="logo-box">
+<a href="index.html" style="display:flex;align-items:center;gap:12px">
+<img src="logo.png" alt="Wael Farid Logo" width="58" height="58">
+<div>
+<div class="brand-en">WAEL FARID</div>
+<div class="brand-ar">وائل فريد للعمرة والسياحة</div>
+</div>
+</a>
+</div>
+<nav class="nav">
+<a href="index.html">الرئيسية</a>
+<a href="umrah-programs.html">برامج العمرة</a>
+<a href="hotels.html">الفنادق</a>
+<a href="gallery.html">معرض الصور</a>
+<a href="testimonials.html">آراء العملاء</a>
+<a href="contact.html">تواصل معنا</a>
+</nav>
+<a class="btn btn-gold" href="https://wa.me/201069342225">01069342225 📞</a>
+</header>
+
+<section class="section" style="padding-top:40px" id="gallery">
+<h1 class="section-title">معرض رحلاتنا 📸</h1>
+<p class="section-sub">لقطات من رحلات معتمرينا</p>
+<div class="gallery-grid" id="galleryGrid">
+<div class="g-item" data-slot="g1" onclick="uploadGallery(this)"><img src="gallery-banner.jpg" alt="مجموعة معتمرين مع بانر وائل فريد" loading="lazy"></div>
+<div class="g-item" data-slot="g2" onclick="uploadGallery(this)"><img src="gallery-crowd.jpg" alt="معتمرين أمام الكعبة المشرفة" loading="lazy"></div>
+<div class="g-item" data-slot="g3" onclick="uploadGallery(this)"><img src="gallery-mazarat.jpg" alt="زيارة مزارات المدينة المنورة" loading="lazy"></div>
+<div class="g-item" data-slot="g4" onclick="uploadGallery(this)"><img src="gallery-airport.jpg" alt="معتمرين وائل فريد في المطار" loading="lazy"></div>
+<div class="g-item" data-slot="g5" onclick="uploadGallery(this)"><img src="gallery-group.jpg" alt="صورة جماعية لمعتمرين وائل فريد" loading="lazy"></div>
+<div class="g-item" data-slot="g6" onclick="uploadGallery(this)"><img src="gallery-dua.jpg" alt="لحظة دعاء أمام الكعبة المشرفة" loading="lazy"></div>
+<div class="g-item" data-slot="g7" onclick="uploadGallery(this)"><img src="gallery-airport2.jpg" alt="معتمرين وائل فريد في المطار بجوازات السفر" loading="lazy"></div>
+<div class="g-item" data-slot="g8" onclick="uploadGallery(this)"><img src="gallery-haram-men.jpg" alt="معتمرين داخل المسجد الحرام" loading="lazy"></div>
+<div class="g-item" data-slot="g9" onclick="uploadGallery(this)"><img src="gallery-haram-women.jpg" alt="معتمرات داخل المسجد الحرام" loading="lazy"></div>
+<div class="g-item" data-slot="g10" onclick="uploadGallery(this)"><img src="gallery-nabawi-women.jpg" alt="معتمرات أمام المسجد النبوي" loading="lazy"></div>
+<div class="g-item" data-slot="g11" onclick="uploadGallery(this)"><img src="gallery-terminal-women.jpg" alt="معتمرات في صالة المطار" loading="lazy"></div>
+<div class="g-item" data-slot="g12" onclick="uploadGallery(this)"><img src="gallery-nabawi-door.jpg" alt="معتمرات أمام باب المسجد النبوي" loading="lazy"></div>
+<div class="g-item" data-slot="g13" onclick="uploadGallery(this)"><img src="gallery-wael-airport.jpg" alt="وائل فريد يستقبل المعتمرين في المطار" loading="lazy"></div>
+</div>
+<p class="alert-dark admin-only" style="display:none">⚠️ ملاحظة للسيدات: اعمل Blur للوجه قبل الرفع للحفاظ على الخصوصية - هذا يزيد ثقة العملاء</p>
+</section>
+
+<section class="section" id="videos" style="background:#0f2336;padding-top:35px">
+<h2 class="section-title">فيديوهات رحلاتنا</h2>
+<p class="section-sub">لحظات حية من رحلات معتمرينا</p>
+<div class="video-grid">
+<div class="video-card"><video controls preload="none" poster="video-poster-1.jpg"><source src="video-clip-1.mp4" type="video/mp4"></video></div>
+<div class="video-card"><video controls preload="none" poster="video-poster-2.jpg"><source src="video-clip-2.mp4" type="video/mp4"></video></div>
+<div class="video-card"><video controls preload="none" poster="video-poster-3.jpg"><source src="video-clip-3.mp4" type="video/mp4"></video></div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-brand">
+<img src="logo.png" alt="Wael Farid Logo">
+<div>
+<div class="footer-gold" style="color:var(--gold);font-weight:800">WAEL FARID</div>
+<div style="font-size:11px">وائل فريد للسفر والسياحة</div>
+</div>
+</div>
+<p style="margin-top:14px">سافر معنا بثقة... وننجز إجراءاتك باحتراف</p>
+<p>📞 <a href="https://wa.me/201069342225">01069342225</a></p>
+<div class="footer-social">
+<a href="https://www.facebook.com/share/1EC9vFoRK8/" target="_blank" title="فيسبوك">📘</a>
+<a href="https://wa.me/201069342225" target="_blank" title="واتساب">💬</a>
+<a href="https://t.me/Omratransit" target="_blank" title="تليجرام">📢</a>
+</div>
+</div>
+<div class="footer-col">
+<h4>روابط سريعة</h4>
+<a href="umrah-programs.html">برامج العمرة</a>
+<a href="hotels.html">الفنادق</a>
+<a href="gallery.html">معرض الصور</a>
+<a href="testimonials.html">آراء العملاء</a>
+<a href="contact.html">تواصل معنا</a>
+<a href="about.html">من نحن</a>
+<a href="booking.html">اطلب خدمتك</a>
+</div>
+<div class="footer-col">
+<h4>تابعنا وامسح الكود</h4>
+<div class="footer-qr">
+<img src="qr-facebook.png" alt="QR فيسبوك">
+<img src="qr-whatsapp.png" alt="QR واتساب">
+</div>
+</div>
+</div>
+<div class="footer-bottom">© 2026 وائل فريد للسفر والسياحة - جميع الحقوق محفوظة</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/201069342225">💬</a>
+
+<div class="lightbox-overlay" id="lightbox">
+<button class="lightbox-close" onclick="closeLightbox()">✕</button>
+<button class="lightbox-nav lightbox-prev" onclick="navLightbox(1)">‹</button>
+<img id="lightboxImg" src="" alt="">
+<button class="lightbox-nav lightbox-next" onclick="navLightbox(-1)">›</button>
+</div>
+
+<input type="file" id="fileGallery" accept="image/*" style="display:none">
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wael-faridtourism.github.io/Wael-Farid-Tourism/sitemap.xml
