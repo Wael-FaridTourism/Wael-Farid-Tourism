@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>احسب المسافة من فندقك للحرم - وائل فريد للعمرة</title>
+<meta name="description" content="اعرف بعد فندقك عن الحرم المكي أو المسجد النبوي بالمتر، ووقت المشي والسيارة، قبل ما تحجز. أداة مجانية من وائل فريد للعمرة والسياحة.">
+<meta name="theme-color" content="#0D1B2A">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="canonical" href="https://wael-faridtourism.github.io/Wael-Farid-Tourism/distance.html">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+
+<header class="header">
+<div class="logo-box">
+<a href="index.html" style="display:flex;align-items:center;gap:12px">
+<img src="logo.png" alt="Wael Farid Logo" width="58" height="58">
+<div>
+<div class="brand-en">WAEL FARID</div>
+<div class="brand-ar">وائل فريد للعمرة والسياحة</div>
+</div>
+</a>
+</div>
+<nav class="nav">
+<a href="index.html">الرئيسية</a>
+<a href="umrah-programs.html">برامج العمرة</a>
+<a href="hotels.html">الفنادق</a>
+<a href="gallery.html">معرض الصور</a>
+<a href="testimonials.html">آراء العملاء</a>
+<a href="contact.html">تواصل معنا</a>
+</nav>
+<a class="btn btn-gold" href="https://wa.me/201069342225">01069342225 📞</a>
+</header>
+
+<section class="wizard-section">
+<div style="max-width:560px;width:100%">
+<h1 class="section-title" style="font-size:26px">احسب المسافة لفندقك 📍</h1>
+<p class="wizard-intro">اكتب اسم فندقك واعرف بعده عن الحرم بالمتر، ووقت المشي والسيارة، قبل ما تحجز</p>
+
+<div class="distance-card">
+<div class="city-toggle">
+<button type="button" class="city-btn active" data-city="makkah">مكة المكرمة 🕋</button>
+<button type="button" class="city-btn" data-city="madinah">المدينة المنورة 🕌</button>
+</div>
+
+<div class="form-group">
+<input id="hotelInput" class="form-input" type="text" placeholder="اكتب اسم الفندق..." autocomplete="off">
+<button id="calcBtn" class="btn btn-gold full" style="margin-top:12px">احسب المسافة 📍</button>
+</div>
+
+<div id="errorBox" class="error-box"></div>
+
+<div id="resultBox" class="result-card">
+<div class="result-row"><span>🏨 الفندق</span><b id="resHotelName"></b></div>
+<div class="result-row"><span>🕋 المسافة إلى</span><b id="resHaramName"></b></div>
+<div class="result-row"><span>📏 المسافة</span><b id="resDistance"></b></div>
+<div class="result-row"><span>🚶 وقت المشي</span><b id="resWalk"></b></div>
+<div class="result-row"><span>🚗 وقت السيارة</span><b id="resDrive"></b></div>
+<div style="text-align:center;margin-top:16px"><a class="btn btn-green full" href="booking.html?service=hotel">احجز هذا الفندق الآن</a></div>
+</div>
+
+<div id="gmapsError" class="error-box" style="display:none">
+تعذّر تحميل خدمة الخرائط حالياً. من فضلك تواصل معنا مباشرة على واتساب وهنساعدك نعرف بعد الفندق عن الحرم.
+<div style="margin-top:10px"><a class="btn btn-green full" href="https://wa.me/201069342225">تواصل على واتساب</a></div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="footer-bottom">© 2026 وائل فريد للسفر والسياحة - جميع الحقوق محفوظة</div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/201069342225">💬</a>
+
+<script src="distance.js"></script>
+<script>
+  setTimeout(function(){
+    if(typeof google === "undefined" || !google.maps){
+      document.getElementById("gmapsError").style.display = "block";
+    }
+  }, 6000);
+</script>
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZDd5eRWe-yXdeirtBOHgPm6M8BAxBLMI&libraries=places&language=ar&region=SA&callback=initDistanceTool">
+</script>
+</body>
+</html>
