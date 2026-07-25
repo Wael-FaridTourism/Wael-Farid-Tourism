@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>احسب المسافة من فندقك للحرم - وائل فريد للعمرة</title>
-<meta name="description" content="اعرف بعد فندقك عن الحرم المكي أو المسجد النبوي بالمتر، ووقت المشي والسيارة، قبل ما تحجز. أداة مجانية من وائل فريد للعمرة والسياحة.">
+<meta name="description" content="اعرف المسافة من فندقك لأقرب باب من أبواب الحرم المكي أو المسجد النبوي، بالمتر، ووقت المشي والسيارة، قبل ما تحجز. أداة مجانية من وائل فريد للعمرة والسياحة.">
 <meta name="theme-color" content="#0D1B2A">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="canonical" href="https://wael-faridtourism.github.io/Wael-Farid-Tourism/distance.html">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 
@@ -37,7 +37,7 @@
 <section class="wizard-section">
 <div style="max-width:560px;width:100%">
 <h1 class="section-title" style="font-size:26px">احسب المسافة لفندقك 📍</h1>
-<p class="wizard-intro">اكتب اسم فندقك واعرف بعده عن الحرم بالمتر، ووقت المشي والسيارة، قبل ما تحجز</p>
+<p class="wizard-intro">اكتب اسم فندقك واعرف المسافة لأقرب باب من أبواب الحرم، بالمتر، ووقت المشي والسيارة، قبل ما تحجز</p>
 
 <div class="distance-card">
 <div class="city-toggle">
@@ -54,10 +54,12 @@
 
 <div id="resultBox" class="result-card">
 <div class="result-row"><span>🏨 الفندق</span><b id="resHotelName"></b></div>
-<div class="result-row"><span>🕋 المسافة إلى</span><b id="resHaramName"></b></div>
-<div class="result-row"><span>📏 المسافة</span><b id="resDistance"></b></div>
+<div class="result-row"><span>🚪 أقرب باب</span><b id="resGateName"></b></div>
+<div class="result-row"><span>🕋 المسجد</span><b id="resHaramName"></b></div>
+<div class="result-row"><span>📏 المسافة للباب</span><b id="resDistance"></b></div>
 <div class="result-row"><span>🚶 وقت المشي</span><b id="resWalk"></b></div>
 <div class="result-row"><span>🚗 وقت السيارة</span><b id="resDrive"></b></div>
+<p style="font-size:11px;color:var(--beige);margin-top:12px;line-height:1.8">⚠️ الأوقات دي تقديرية في الظروف العادية، وممكن تزيد وقت الذروة والزحام (رمضان، مواسم العمرة، الحج)</p>
 <div style="text-align:center;margin-top:16px"><a class="btn btn-green full" href="booking.html?service=hotel">احجز هذا الفندق الآن</a></div>
 </div>
 
@@ -75,7 +77,7 @@
 
 <a class="float-wa" href="https://wa.me/201069342225">💬</a>
 
-<script src="distance.js"></script>
+<script src="distance.js?v=2"></script>
 <script>
   setTimeout(function(){
     if(typeof google === "undefined" || !google.maps){
